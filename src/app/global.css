@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "tailwindcss";
+
+/* Puedes agregar estilos globales aquí */
+
+
+@theme{
+    /* Custom colors */
+
+    --primary-color: #4a90e2;
+}

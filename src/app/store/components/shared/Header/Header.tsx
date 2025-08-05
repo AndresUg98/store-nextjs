@@ -5,9 +5,9 @@ export const Header = () => {
 
 
     return(
-        <header>
-          <nav>
-            <ul>
+        <header className="w-full ">
+          <nav className="" >
+            <ul className="flex justify-center gap-8 p-4">
               <Link href="/">
                 <li>Home</li>
               </Link>
