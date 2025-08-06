@@ -1,18 +1,24 @@
 
-import { Geist, Geist_Mono } from "next/font/google";
+import { Roboto } from "next/font/google";
 import './global.css';
 import { Header } from "./store/components/shared/Header";
 import { Footer } from "./store/components/shared/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+// const geistSans = Geist({
+//   variable: "--font-geist-sans",
+//   subsets: ["latin"],
+// });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+// const geistMono = Geist_Mono({
+//   variable: "--font-geist-mono",
+//   subsets: ["latin"],
+// });
+
+const roboto = Roboto({
+  weight: ["100", "300", "500", "700"],
   subsets: ["latin"],
-});
+  variable: "--font-roboto",
+})
 
 // export const metadata: Metadata = {
 //   title: "Future world",
@@ -27,16 +33,18 @@ export default function RootLayout({
   return (
     <html lang="en">
 
-      <Header />
+      
 
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${roboto.variable} ${roboto.variable} antialiased`}
       >
+        <Header />
 
 
         {children}
+        <Footer />
       </body>
-      <Footer />
+      
     </html>
   );
 }
